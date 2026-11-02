@@ -153,3 +153,10 @@ blockquote footer { font-size: .9rem; color: var(--muted); }
 .rady-chips small { color: var(--muted); font: .78rem var(--font-body, inherit); margin-left: .4rem; }
 .uvod { color: var(--muted); max-width: 38rem; }
 @media (max-width: 40rem) { .hero-siroka img { aspect-ratio: 4/3; } }
+
+/* hero foto v šířce obsahu, aby se nezvětšovala přes původní rozlišení */
+.hero { padding-top: 1.5rem; }
+.hero-siroka { width: min(100% - 2.5rem, 62rem); margin-left: max(1.25rem, calc((100vw - 74rem)/2)); }
+@media (max-width: 62rem) { .hero-siroka { margin-inline: auto; } }
+.hero-siroka img { border: 1px solid var(--line); max-height: none; aspect-ratio: 16/10; }
+.hero-siroka figcaption { padding: .7rem 0 0; }
