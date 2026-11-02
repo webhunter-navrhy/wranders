@@ -1,0 +1,8 @@
+[
+  {"nazev": "ALFA 66", "foto": "alfa-18.jpg", "plocha": "65,9", "izby": 3, "projekt": "1 120", "kluc": "71 100"},
+  {"nazev": "ALFA 72", "foto": "alfa-19.jpg", "plocha": "72,3", "izby": 3, "projekt": "1 220", "kluc": "77 800"},
+  {"nazev": "ALFA 73", "foto": "alfa-20.jpg", "plocha": "73,4", "izby": 2, "projekt": "2 400", "kluc": "78 000"},
+  {"nazev": "ALFA 87", "foto": "alfa-21.jpg", "plocha": "87,5", "izby": 3, "projekt": "1 250", "kluc": "93 500"},
+  {"nazev": "ALFA 90", "foto": "alfa-22.jpg", "plocha": "90,3", "izby": 3, "projekt": "1 170", "kluc": "96 500"},
+  {"nazev": "ALFA 91", "foto": "alfa-23.jpg", "plocha": "95,8", "izby": 3, "projekt": "2 550", "kluc": "102 000"}
+]

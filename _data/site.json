@@ -1,0 +1,31 @@
+{
+  "slug": "wranders",
+  "nazev": "Wranders, s.r.o.",
+  "url": "https://webhunter-navrhy.github.io/wranders/",
+  "base": "/wranders/",
+  "lang": "sk",
+  "popis": "Katalóg projektov rodinných domov, chát a chalúp od roku 2003. Viac ako 1 100 projektových riešení, úpravy projektov a osadenie na pozemok. Bratislava.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "og.jpg",
+  "logo": "logo.svg",
+  "theme_color": "#f6f2ea",
+  "typ": "LocalBusiness",
+  "ico": "35891211",
+  "kontakt": {
+    "email": "wranders@wranders.sk",
+    "telefon": "+421 907 662 028",
+    "adresa": {"ulice": "Čajakova 19", "psc": "811 05", "mesto": "Bratislava", "zeme": "SK"}
+  },
+  "oteviraci_doba": [],
+  "sameas": [],
+  "cenove_rozpeti": "",
+  "formular": {"endpoint": "", "demo": true, "predmet": "Dopyt z webu"},
+  "nav": [
+    {"text": "Katalóg", "href": "#katalog"},
+    {"text": "Rady domov", "href": "#rady"},
+    {"text": "Služby", "href": "#sluzby"},
+    {"text": "O nás", "href": "#o-nas"},
+    {"text": "Kontakt", "href": "#kontakt"}
+  ]
+}

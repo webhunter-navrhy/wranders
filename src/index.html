@@ -1,0 +1,125 @@
+{% extends "_base.html" %}
+{% set titulek = 'Projekty rodinných domov, chát a chalúp | Wranders, s.r.o. Bratislava' %}
+{% set cesta = '' %}
+{% block obsah %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="kota">Katalóg projektov od roku 2003</p>
+      <h1>Projektujeme Vaše sny do reality</h1>
+      <p class="lead">Katalógové projekty rodinných domov, chát a chalúp. V súčasnom 13. vydaní nájdete viac ako 1&nbsp;100 projektových riešení, ktoré podľa objednávky dopracujeme do projektu pre stavebné povolenie.</p>
+      <p class="tlacitka"><a class="btn" href="#katalog">Pozrieť projekty</a> <a class="btn btn-linka" href="#kontakt">Napísať nám</a></p>
+    </div>
+    <figure class="hero-foto">
+      {{ img('dom-realizace.jpg', 'Zrealizovaný rodinný dom s červenou škridlovou strechou', sizes='(min-width: 62rem) 46vw, 100vw') }}
+      <figcaption><span>Realizácia podľa projektu z katalógu</span></figcaption>
+    </figure>
+  </div>
+  <div class="wrap pas">
+    <dl>
+      <div><dt>1&nbsp;106</dt><dd>projektových riešení</dd></div>
+      <div><dt>164</dt><dd>chát a chalúp</dd></div>
+      <div><dt>4&nbsp;154</dt><dd>realizácií</dd></div>
+      <div><dt>13.</dt><dd>vydanie katalógu</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sekce" id="katalog">
+  <div class="wrap">
+    <header class="sek-hlava">
+      <h2>Z katalógu: rad ALFA</h2>
+      <p>Prízemné rodinné domy typu bungalov so sedlovou alebo valbovou strechou. Vďaka bezbariérovému riešeniu sú vhodné aj pre osoby so zníženou pohyblivosťou. Povalový priestor sa dá využiť na odkladanie, po úprave aj na bývanie.</p>
+    </header>
+    <ul role="list" class="karty">
+      {% for p in data.projekty %}
+      <li class="karta">
+        {{ img(p.foto, 'Vizualizácia rodinného domu ' ~ p.nazev, sizes='(min-width: 62rem) 30vw, (min-width: 40rem) 46vw, 100vw') }}
+        <div class="karta-telo">
+          <h3>{{ p.nazev }}</h3>
+          <dl class="parametre">
+            <div><dt>Zastavaná plocha</dt><dd>{{ p.plocha }} m²</dd></div>
+            <div><dt>Obytné izby</dt><dd>{{ p.izby }}</dd></div>
+            <div><dt>Cena projektu</dt><dd>{{ p.projekt }} €</dd></div>
+            <div><dt>Stavba na kľúč</dt><dd>{{ p.kluc }} €</dd></div>
+          </dl>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="poznamka">Kompletná ponuka obsahuje ďalšie rady: BETA, GAMMA, DELTA, ZETA, KAPPA, LAMBDA, SIGMA (radové a bytové domy), TAU a OMEGA.</p>
+  </div>
+</section>
+
+<section class="sekce tmava" id="rady">
+  <div class="wrap dvojstlpec">
+    <figure class="foto-vedla">
+      {{ img('chata.jpg', 'Drevená chata s ozdobným štítom a plechovou strechou', sizes='(min-width: 62rem) 46vw, 100vw') }}
+    </figure>
+    <div>
+      <h2>Chaty a chalupy: rad THETA</h2>
+      <p>V ponuke nájdete aj rad THETA, ktorý ponúka výlučne chaty a chalupy. V katalógu je ich viac ako 164, od najmenších víkendových až po rozsiahlejšie rekreačné domy.</p>
+      <p>Všetky projekty rodinných domov v ponuke spĺňajú z hľadiska mernej potreby tepla na vykurovanie požiadavky normy STN 73 0540-2.</p>
+      <p class="garaz"><strong>Garáž k projektu zadarmo.</strong> K projektu rodinného domu si automaticky môžete vybrať garáž z našej ponuky.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sekce" id="cesta">
+  <div class="wrap">
+    <h2>Cesta k Vášmu domu</h2>
+    <ol role="list" class="kroky">
+      <li><span class="cislo">1</span><h3>Výber pozemku</h3><p>Od výberu vhodnej lokality až po kolaudačné rozhodnutie.</p></li>
+      <li><span class="cislo">2</span><h3>Voľba financovania</h3><p>Všetky dostupné možnosti financovania stavby rodinného domu.</p></li>
+      <li><span class="cislo">3</span><h3>Výber projektu</h3><p>Najvhodnejší projekt podľa Vašich predstáv.</p></li>
+      <li><span class="cislo">4</span><h3>Realizácia stavby</h3><p>Stavba domu Vašich snov na kľúč.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sekce svetla2" id="sluzby">
+  <div class="wrap dvojstlpec dvojstlpec-obr">
+    <div>
+      <h2>Čo pre Vás urobíme</h2>
+      <ul role="list" class="sluzby">
+        {% for s in data.sluzby %}<li><h3>{{ s.nazev }}</h3><p>{{ s.popis }}</p></li>{% endfor %}
+      </ul>
+      <p class="hodiny">Konzultačné hodiny: 9:00 – 16:30</p>
+    </div>
+    <figure class="foto-vedla">
+      {{ img('nacrt.jpg', 'Náčrt rodinného domu a garáže', sizes='(min-width: 62rem) 40vw, 100vw') }}
+    </figure>
+  </div>
+</section>
+
+<section class="sekce" id="o-nas">
+  <div class="wrap dvojstlpec">
+    <div>
+      <h2>O spoločnosti</h2>
+      <p>Firma WRANDERS vznikla v roku 2003 so zámerom rozšíriť ponuku katalógových projektov rodinných domov na slovenskom trhu. V roku 2004 bola založená spoločnosť WRANDERS s.r.o., ktorá vydáva už 13. ročník katalógu rodinných domov.</p>
+      <p>Naša ponuka sa neustále rozširuje o nové typy a veľkostné kategórie. Získavame ich aj z návrhov a požiadaviek našich zákazníkov.</p>
+      <blockquote>
+        <p>Na začiatku každého projektu uvažujeme nad tým, čo by chceli naši priatelia, rodiny, kolegovia. Potom je všetko jednoduchšie, pretože do projektov vkladáme sami seba.</p>
+        <footer>Juraj Holík, zakladateľ</footer>
+      </blockquote>
+    </div>
+    <figure class="foto-vedla">
+      {{ img('katalog.jpg', 'Katalógy rodinných domov Wranders z rôznych rokov', sizes='(min-width: 62rem) 40vw, 100vw') }}
+    </figure>
+  </div>
+</section>
+
+<section class="sekce tmava kontakt" id="kontakt">
+  <div class="wrap dvojstlpec">
+    <div>
+      <h2>Kontakt</h2>
+      <address>
+        <p><strong>Obchodná kancelária</strong><br>Čajakova 19, 811 05 Bratislava</p>
+        <p><strong>Sídlo spoločnosti</strong><br>Romanova 13, 852 82 Bratislava</p>
+        <p><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a><br><a href="tel:+421907662028">+421 907 662 028</a><br><a href="tel:+421903790797">+421 903 790 797</a></p>
+      </address>
+    </div>
+    <div>{% include "_formular.html" %}</div>
+  </div>
+</section>
+{% endblock %}
