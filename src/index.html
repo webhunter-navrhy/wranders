@@ -3,25 +3,15 @@
 {% set cesta = '' %}
 {% block obsah %}
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <p class="kota">Katalóg projektov od roku 2003</p>
-      <h1>Projektujeme Vaše sny do reality</h1>
-      <p class="lead">Katalógové projekty rodinných domov, chát a chalúp. V súčasnom 13. vydaní nájdete viac ako 1&nbsp;100 projektových riešení, ktoré podľa objednávky dopracujeme do projektu pre stavebné povolenie.</p>
-      <p class="tlacitka"><a class="btn" href="#katalog">Pozrieť projekty</a> <a class="btn btn-linka" href="#kontakt">Napísať nám</a></p>
-    </div>
-    <figure class="hero-foto">
-      {{ img('dom-realizace.jpg', 'Zrealizovaný rodinný dom s červenou škridlovou strechou', sizes='(min-width: 62rem) 46vw, 100vw') }}
-      <figcaption><span>Realizácia podľa projektu z katalógu</span></figcaption>
-    </figure>
-  </div>
-  <div class="wrap pas">
-    <dl>
-      <div><dt>1&nbsp;106</dt><dd>projektových riešení</dd></div>
-      <div><dt>164</dt><dd>chát a chalúp</dd></div>
-      <div><dt>4&nbsp;154</dt><dd>realizácií</dd></div>
-      <div><dt>13.</dt><dd>vydanie katalógu</dd></div>
-    </dl>
+  <figure class="hero-foto hero-siroka">
+    {{ img('dom-realizace.jpg', 'Zrealizovaný rodinný dom s červenou škridlovou strechou', sizes='100vw') }}
+    <figcaption><span>Realizácia podľa projektu z katalógu</span></figcaption>
+  </figure>
+  <div class="wrap hero-text hero-pod">
+    <p class="kota">Katalóg projektov od roku 2003</p>
+    <h1>Projektujeme Vaše sny do reality</h1>
+    <p class="lead">Katalógové projekty rodinných domov, chát a chalúp. V súčasnom 13. vydaní nájdete viac ako 1&nbsp;100 projektových riešení, z toho vyše 160 chát a chalúp, ktoré podľa objednávky dopracujeme do projektu pre stavebné povolenie.</p>
+    <p class="tlacitka"><a class="btn" href="#katalog">Pozrieť projekty</a> <a class="btn btn-linka" href="#kontakt">Napísať nám</a></p>
   </div>
 </section>
 
@@ -32,7 +22,7 @@
       <p>Prízemné rodinné domy typu bungalov so sedlovou alebo valbovou strechou. Vďaka bezbariérovému riešeniu sú vhodné aj pre osoby so zníženou pohyblivosťou. Povalový priestor sa dá využiť na odkladanie, po úprave aj na bývanie.</p>
     </header>
     <ul role="list" class="karty">
-      {% for p in data.projekty %}
+      {% for p in data.projekty[:3] %}
       <li class="karta">
         {{ img(p.foto, 'Vizualizácia rodinného domu ' ~ p.nazev, sizes='(min-width: 62rem) 30vw, (min-width: 40rem) 46vw, 100vw') }}
         <div class="karta-telo">
@@ -47,7 +37,8 @@
       </li>
       {% endfor %}
     </ul>
-    <p class="poznamka">Kompletná ponuka obsahuje ďalšie rady: BETA, GAMMA, DELTA, ZETA, KAPPA, LAMBDA, SIGMA (radové a bytové domy), TAU a OMEGA.</p>
+    <p class="poznamka">Ďalšie rady v katalógu:</p>
+    <ul role="list" class="rady-chips"><li>BETA</li><li>GAMMA</li><li>DELTA</li><li>ZETA</li><li>KAPPA</li><li>LAMBDA</li><li>SIGMA <small>radové a bytové domy</small></li><li>TAU</li><li>OMEGA</li><li>THETA <small>chaty a chalupy</small></li></ul>
   </div>
 </section>
 
@@ -65,22 +56,11 @@
   </div>
 </section>
 
-<section class="sekce" id="cesta">
-  <div class="wrap">
-    <h2>Cesta k Vášmu domu</h2>
-    <ol role="list" class="kroky">
-      <li><span class="cislo">1</span><h3>Výber pozemku</h3><p>Od výberu vhodnej lokality až po kolaudačné rozhodnutie.</p></li>
-      <li><span class="cislo">2</span><h3>Voľba financovania</h3><p>Všetky dostupné možnosti financovania stavby rodinného domu.</p></li>
-      <li><span class="cislo">3</span><h3>Výber projektu</h3><p>Najvhodnejší projekt podľa Vašich predstáv.</p></li>
-      <li><span class="cislo">4</span><h3>Realizácia stavby</h3><p>Stavba domu Vašich snov na kľúč.</p></li>
-    </ol>
-  </div>
-</section>
-
 <section class="sekce svetla2" id="sluzby">
   <div class="wrap dvojstlpec dvojstlpec-obr">
     <div>
       <h2>Čo pre Vás urobíme</h2>
+      <p class="uvod">Pomôžeme od výberu pozemku a financovania až po projekt a stavbu domu na kľúč.</p>
       <ul role="list" class="sluzby">
         {% for s in data.sluzby %}<li><h3>{{ s.nazev }}</h3><p>{{ s.popis }}</p></li>{% endfor %}
       </ul>

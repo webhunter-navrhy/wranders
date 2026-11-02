@@ -1,0 +1,16 @@
+{
+  "znamka": 7,
+  "slabiny": [
+    "Hero na PC (1440) i na mobilu: fotka realizácie je malý rámeček v pravém sloupci (asi 255 px na výšku) a na 390 px spadne pod CTA, kde ji ohyb obrazovky ořízne. Je to stejná chyba jako u Rezidence Metelka v1. Opravit: dát velkou fotku domu přes celou šířku (na mobilu nad nadpis) a pod ni dát nadpis „Projektujeme Vaše sny do reality“ s CTA. Rámeček s kótovací linkou nechat jen jako detail.",
+    "Pás statistik pod hero (1 106 / 164 / 4 154 / 13.) a číslování kroků 1–4 v sekci „Cesta k Vášmu domu“ jsou dva zakázané vzory ze šablon. „Cesta“ navíc obsahově opakuje sekci „Čo pre Vás urobíme“. Opravit: místo pásu čísel dát lištu výběru z katalogu (typ domu / plocha / počet izieb s odkazem na rady), čísla nechat jednou větou v textu hero. „Cestu“ sloučit se Službami bez číslic.",
+    "Katalog: šest stejných karet řady ALFA za sebou a ostatní řady (BETA, GAMMA… OMEGA) jen jako jeden řádek textu. U katalogu s více než 1 100 projekty to vypadá chudě a na mobilu zabere 6 celých obrazovek. Opravit: nahoru dát rozcestník všech řad jako dlaždice s jedním renderem a jednou větou popisu (u ALFA a THETA s odkazem na detail). Karty ALFA zkrátit na 3 a na mobilu je dát do vodorovného posuvu nebo kompaktního seznamu."
+  ],
+  "zavazne": [],
+  "silne": [
+    "Brand sedí: logo Wranders je celé vlevo v hlavičce, paleta je z červené #c2151b a tmavé #2f2f2f z loga, papírové pozadí ladí s technickým katalogem.",
+    "Karty projektů jako technické listy (plocha, izby, cena projektu, stavba na klíč, mono čísla) jsou konkrétní nápad z oboru, prodávají a čtou se dobře.",
+    "Obsah vychází z webu klienta (řady, norma STN 73 0540-2, garáž zdarma, citát zakladatele, dvě adresy, e-mail a telefony), kontakt s formulářem je jasný, nic nepřetéká na žádné ze 6 šířek."
+  ],
+  "verdikt": "opravit: korektní a značkově správný katalogový web, ale hero s malou fotkou, pás statistik a číslované kroky ho táhnou k šabloně a katalog ukazuje jen jednu řadu. Po zvětšení hero fotky a rozcestníku řad má na 8.",
+  "_hash": "c05e1c65760addde9455e1e6cbc366b2e7826f45"
+}

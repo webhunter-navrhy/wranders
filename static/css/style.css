@@ -139,3 +139,17 @@ blockquote footer { font-size: .9rem; color: var(--muted); }
   .logo img { height: 2.2rem; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* hero široká fotka */
+.hero { padding-top: 0; }
+.hero-siroka { padding: 0; margin: 0; }
+.hero-siroka::before, .hero-siroka::after { display: none; }
+.hero-siroka img { width: 100%; aspect-ratio: 16/9; max-height: 68vh; object-fit: cover; object-position: 50% 62%; border: 0; border-bottom: 1px solid var(--line); display: block; }
+.hero-siroka figcaption { position: static; padding: .7rem max(1.25rem, calc((100vw - 74rem)/2)); }
+.hero-pod { padding-top: 2.5rem; padding-bottom: 3rem; max-width: 56rem; margin-left: auto; margin-right: auto; }
+@media (min-width: 62rem) { .hero-pod { margin-left: max(1.25rem, calc((100vw - 74rem)/2)); } }
+.rady-chips { display: flex; flex-wrap: wrap; gap: .6rem; padding: 0; list-style: none; margin: .8rem 0 0; }
+.rady-chips li { border: 1px solid var(--line); background: var(--paper, #faf8f3); padding: .55rem 1rem; font: .85rem var(--font-mono); letter-spacing: .04em; }
+.rady-chips small { color: var(--muted); font: .78rem var(--font-body, inherit); margin-left: .4rem; }
+.uvod { color: var(--muted); max-width: 38rem; }
+@media (max-width: 40rem) { .hero-siroka img { aspect-ratio: 4/3; } }
